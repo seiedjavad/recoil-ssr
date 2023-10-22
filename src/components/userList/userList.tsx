@@ -1,3 +1,7 @@
+import {useRecoilValue} from "recoil";
+import {userAtom} from "@/atoms/users";
+
 export const UserList=()=>{
-    return(<div>hi</div>);
+    const userData = useRecoilValue(userAtom)
+    return(<div>{userData.name}</div>);
 }
